@@ -2,15 +2,22 @@ Quando('clico em botoes') do
   visit '/'
   click_link_or_button('Começar Automação Web') #Web sem esse final não funciona, demorou pra eu encontrar o erro#
   visit '/buscaelementos/botoes'
-  click_button(class: 'btn waves-light') #class: essencial sem ele não button
-  find('a[onclick="ativaedesativa2()"]').click
-  find('a[onclick="ativaedesativa2()"]').double_click
-  find('a[onclick="ativaedesativa3()"]').right_click
+  find('#teste').click
+  #{}click_button(class: 'btn waves-light') #class: essencial sem ele não button
+  #{}find('a[onclick="ativaedesativa2()"]').click
+  #{}find('a[onclick="ativaedesativa2()"]').double_click
+  #{}find('a[onclick="ativaedesativa3()"]').right_click
   #{}visit 'https://www.linkedin.com/'
   #click_link ('href="https://www.linkedin.com/in/bruno-batista-87734464"')
   #visit 'https://www.facebook.com/Brunobatistatestes/'
   #click_link('href="https://www.facebook.com/Brunobatistatestes/"')
 
-  sleep 10
+  sleep 3
 end
+  Entao('recebo a mensagem voce clicou no botão') do
+    texto = find('#div1')
+    expect(texto.text).to eql 'Você Clicou no Botão!'
+
+  end
+
 

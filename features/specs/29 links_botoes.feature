@@ -6,4 +6,6 @@
 
   Cenario: Clicando em links e Botoes
   Quando clico em botoes
+  Entao recebo a mensagem voce clicou no botão
+
 
